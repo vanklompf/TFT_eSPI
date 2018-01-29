@@ -1,13 +1,3 @@
-// Change the width and height if required (defined in portrait mode)
-// or use the constructor to over-ride defaults
-#ifndef TFT_WIDTH
-  #define TFT_WIDTH  128
-#endif
-#ifndef TFT_HEIGHT
-  #define TFT_HEIGHT 160
-#endif
-
-
 // Enumerate the different configurations
 #define INITR_GREENTAB  0x0
 #define INITR_REDTAB    0x1
