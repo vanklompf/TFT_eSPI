@@ -61,6 +61,9 @@
 #define TFT_INVOFF  0x20
 #define TFT_INVON   0x21
 
+// Defines pixel color configuration: RGB/BGR
+#define TFT_COLOR_ORDER TFT_MAD_BGR
+
 #define TFT_NORON  0x13 //normal mode
 #define TFT_PTLON  0x12 //partial mode
 #define TFT_PTLAR  0x30 //partial area
