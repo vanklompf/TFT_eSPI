@@ -1,7 +1,11 @@
-  // This is the command sequence that rotates the ILI9486 driver coordinate frame
+#include "TFT_eSPI.h"
 
+// This is the command sequence that rotates the ILI9486 driver coordinate frame
+#if (TFT_DRIVER == RPI_ILI9486)
+void TFT_eSPI::setRotationImpl(uint8_t rotation)
+{
   writecommand(TFT_MADCTL);
-  rotation = m % 8;
+  rotation = rotation % 8;
   switch (rotation) {
    case 0: // Portrait
      writedata(TFT_MAD_BGR | TFT_MAD_MX);
@@ -44,4 +48,5 @@
      _height = _width_orig;
      break;
   }
-  
+}
+#endif /* (TFT_DRIVER == RPI_ILI9486) */

@@ -1,7 +1,12 @@
+#include "TFT_eSPI.h"
 
 // This is the command sequence that rotates the ILI9341 driver coordinate frame
+#if (TFT_DRIVER == ILI9341)
 
-  rotation = m % 8; // Limit the range of values to 0-7
+void TFT_eSPI::setRotationImpl(uint8_t rotation)
+{
+
+  rotation = rotation % 8; // Limit the range of values to 0-7
 
   writecommand(TFT_MADCTL);
   switch (rotation) {
@@ -80,3 +85,6 @@
       break;
 
   }
+}
+#endif /* (TFT_DRIVER == ILI9341) */
+

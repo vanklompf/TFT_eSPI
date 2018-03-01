@@ -19,17 +19,7 @@
 
 // Include header file that defines the fonts loaded, the TFT drivers
 // available and the pins to be used
-#include <User_Setup_Select.h>
-
-// If the frequency is not defined, set a default
-#ifndef SPI_FREQUENCY
-  #define SPI_FREQUENCY  20000000
-#endif
-
-// If the frequency is not defined, set a default
-#ifndef SPI_TOUCH_FREQUENCY
-  #define SPI_TOUCH_FREQUENCY  2500000
-#endif
+#include <User_Setups/User_Setup_Dispatch.h>
 
 // Only load the fonts defined in User_Setup.h (to save space)
 // Set flag so RLE rendering code is optionally compiled
@@ -354,7 +344,7 @@ class TFT_eSPI : public Print {
            fillRoundRect(int32_t x0, int32_t y0, int32_t w, int32_t h, int32_t radius, uint32_t color),
 
            setRotation(uint8_t r),
-           invertDisplay(boolean i),
+		   invertDisplay(boolean i),
            
            setPartialMode(bool mode),
            setPartialArea(int16_t startLine, int16_t endLine),
@@ -484,8 +474,10 @@ class TFT_eSPI : public Print {
   inline void spi_begin_touch() __attribute__((always_inline));
   inline void spi_end_touch()   __attribute__((always_inline));
 
-  void     readAddrWindow(int32_t xs, int32_t ys, int32_t xe, int32_t ye);
-    
+  void readAddrWindow(int32_t xs, int32_t ys, int32_t xe, int32_t ye);
+  void initImpl();
+  void setRotationImpl(uint8_t r);
+
   uint8_t  tabcolor,
            colstart = 0, rowstart = 0; // some ST7735 displays need this changed
 

@@ -1,3 +1,6 @@
+#ifndef ILI9341_DEFINES_H
+#define ILI9341_DEFINES_H
+
 // Color definitions for backwards compatibility with old sketches
 // use colour definitions like TFT_BLACK to make sketches more portable
 #define ILI9341_BLACK       0x0000      /*   0,   0,   0 */
@@ -118,3 +121,5 @@
 #define ILI9341_MADCTL_RGB 0x00
 #define ILI9341_MADCTL_BGR 0x08
 #define ILI9341_MADCTL_MH  0x04
+
+#endif /* ILI9341_DEFINES_H */

@@ -1,13 +1,7 @@
 {
   "name": "TFT_eSPI",
-  "version": "0.18.16",
-  "keywords": "tft, display, ESP8266, NodeMCU, ESP32, M5Stack, ILI9341, ST7735, ILI9163, S6D02A1, ILI9486",
   "description": "A TFT SPI graphics library for ESP8266 and ESP32",
-  "repository":
-  {
-    "type": "git",
-    "url": "https://github.com/Bodmer/TFT_eSPI"
-  },
+  "keywords": "tft, display, ESP8266, NodeMCU, ESP32, M5Stack, ILI9341, ST7735, ILI9163, S6D02A1, ILI9486",
   "authors":
   [
     {
@@ -20,6 +14,20 @@
         "url": "https://www.adafruit.com/"
     }
   ],
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/vanklompf/TFT_eSPI"
+  },
+  "version": "0.1.1",
+  "license": "MIT",
   "frameworks": "arduino",
-  "platforms": "espressif8266, espressif32"
+  "platforms": "espressif8266, espressif32",
+  "build": {
+    "srcFilter": [
+        "+<*.cpp>",
+        "+<TFT_Drivers/*.cpp>"
+    ]
+}
+  
 }

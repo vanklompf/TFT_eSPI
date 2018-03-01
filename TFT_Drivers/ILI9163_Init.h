@@ -1,3 +1,5 @@
+#ifndef ILI9163_INIT_H
+#define ILI9163_INIT_H
 
 // This is the command sequence that initialises the ILI9163 driver
 //
@@ -39,3 +41,5 @@
       rowstart = 0;
     #endif
 }
+
+#endif /* ILI9163_INIT_H */

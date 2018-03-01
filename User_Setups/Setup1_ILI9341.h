@@ -1,3 +1,6 @@
+#ifndef SETUP1_ILI9341_H
+#define SETUP1_ILI9341_H
+
 //                            USER DEFINED SETTINGS
 //   Set driver type, fonts to be loaded, pins used and SPI control method etc
 //
@@ -207,3 +210,5 @@
 // so changing it here has no effect
 
 // #define SUPPORT_TRANSACTIONS
+
+#endif /* SETUP1_ILI9341_H */

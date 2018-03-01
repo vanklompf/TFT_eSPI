@@ -1,3 +1,11 @@
+#ifndef ILI9163_DEFINES_H
+#define ILI9163_DEFINES_H
+
+
+//To be removed:
+#define SPI_TOUCH_FREQUENCY 666
+
+
 // Color definitions for backwards compatibility with old sketches
 // use colour definitions like TFT_BLACK to make sketches more portable
 #define ILI9163_BLACK       0x0000      /*   0,   0,   0 */
@@ -59,3 +67,5 @@
 
 #define TFT_PWCTR1 0xC0
 #define TFT_PWCTR2 0xC1
+
+#endif /* ILI9163_DEFINES_H */

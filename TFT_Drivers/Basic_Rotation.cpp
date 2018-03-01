@@ -1,6 +1,19 @@
-// This is the command sequence that rotates the ST7735/ILI9163/S6D02A1 driver coordinate frame
+#include "TFT_eSPI.h"
 
-  rotation = m % 4; // Limit the range of values to 0-3
+// This is the command sequence that rotates the ST7735/ILI9163/S6D02A1 driver coordinate frame
+#if (TFT_DRIVER == ILI9163) || (TFT_DRIVER == ST7735) || (TFT_DRIVER == S6D02A1)
+
+#if (TFT_DRIVER == ST7735)
+  #include "TFT_Drivers/ST7735_Defines.h"
+#elif (TFT_DRIVER == ILI9163)
+  #include "TFT_Drivers/ILI9163_Defines.h"
+#elif (TFT_DRIVER == S6D02A1)
+  #include "TFT_Drivers/S6D02A1_Defines.h"
+#endif
+
+void TFT_eSPI::setRotationImpl(uint8_t rotation)
+{
+  rotation = rotation % 4; // Limit the range of values to 0-3
 
   writecommand(TFT_MADCTL);
   switch (rotation) {
@@ -41,3 +54,6 @@
 #endif
       break;
   }
+}
+
+#endif
