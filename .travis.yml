@@ -9,9 +9,11 @@ cache:
 
 install:
     - pip install -U platformio
+    - platformio update
 
 env:
     - PLATFORMIO_CI_SRC="examples/160 x 128/Arduino_Life"
-
+    - PLATFORMIO_CI_SRC="examples/Sprite/Transparent_Sprite_Demo"
+    
 script:
-    - platformio ci --lib="." --board=nodemcuv2  --project-conf=platformio.ini
+    - platformio ci --lib="." --board=nodemcuv2 --project-conf=platformio.ini
