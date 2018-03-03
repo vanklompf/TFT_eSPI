@@ -1,3 +1,6 @@
+#ifndef ILI9486_DEFINES_H
+#define ILI9486_DEFINES_H
+
 // For Raspberry Pi ILI9486 only with a modified board to add a write strobe:
 #ifdef TFT_WR
   #define RPI_WRITE_STROBE
@@ -54,3 +57,5 @@
 
 #define TFT_INVOFF  0x20
 #define TFT_INVON   0x21
+
+#endif /* ILI9486_DEFINES_H */

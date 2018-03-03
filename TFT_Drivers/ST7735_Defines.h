@@ -1,3 +1,6 @@
+#ifndef ST7735_DEFINES_H
+#define ST7735_DEFINES_H
+
 // Enumerate the different configurations
 #define INITR_GREENTAB  0x0
 #define INITR_REDTAB    0x1
@@ -165,3 +168,5 @@
 
 #define ST7735_GMCTRP1 0xE0
 #define ST7735_GMCTRN1 0xE1
+
+#endif /* ST7735_DEFINES_H */

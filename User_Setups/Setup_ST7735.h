@@ -1,20 +1,13 @@
-#define RPI_ILI9486_DRIVER // 20MHz maximum SPI
+#ifndef SETUP_ST7735_H
+#define SETUP_ST7735_H
+
 
 #ifndef TFT_WIDTH
-  #define TFT_WIDTH  320
+  #define TFT_WIDTH  128
 #endif
 #ifndef TFT_HEIGHT
-  #define TFT_HEIGHT 480
+  #define TFT_HEIGHT 160
 #endif
-
-
-// For M5Stack ESP32 module with integrated display ONLY, remove // in line below
-//#define M5STACK
-
-// For ST7735  and ILI9163 ONLY, define the pixel width and height in portrait orientation
-//#define TFT_WIDTH  128
-//#define TFT_HEIGHT 160
-//#define TFT_HEIGHT 128
 
 // For ST7735 ONLY, define the type of display, originally this was based on the
 // colour of the tab on the screen protector film but this is not always true, so try
@@ -28,7 +21,7 @@
 //#define ST7735_GREENTAB2
 //#define ST7735_GREENTAB3
 //#define ST7735_GREENTAB128 // For 128 x 128 display
-//#define ST7735_REDTAB
+#define ST7735_REDTAB
 //#define ST7735_BLACKTAB
 
 // ##################################################################################
@@ -76,7 +69,7 @@
 #define TFT_RST  PIN_D4  // Reset pin (could connect to NodeMCU RST, see next line)
 //#define TFT_RST  -1  // Set TFT_RST to -1 if the display RESET is connected to NodeMCU RST or 3.3V
 
-#define TOUCH_CS PIN_D1     // Chip select pin (T_CS) of touch screen
+//#define TOUCH_CS PIN_D1     // Chip select pin (T_CS) of touch screen
 
 //#define TFT_WR PIN_D2       // Write strobe for modified Raspberry Pi TFT only
 
@@ -175,8 +168,8 @@
 // #define SPI_FREQUENCY   1000000
 // #define SPI_FREQUENCY   5000000
 // #define SPI_FREQUENCY  10000000
-#define SPI_FREQUENCY  20000000
-// #define SPI_FREQUENCY  27000000 // Actually sets it to 26.67MHz = 80/3
+// #define SPI_FREQUENCY  20000000
+#define SPI_FREQUENCY  27000000 // Actually sets it to 26.67MHz = 80/3
 // #define SPI_FREQUENCY  40000000 // Maximum to use SPIFFS
 // #define SPI_FREQUENCY  80000000
 
@@ -195,3 +188,5 @@
 // so changing it here has no effect
 
 // #define SUPPORT_TRANSACTIONS
+
+#endif /* #define SETUP_ST7735_H */

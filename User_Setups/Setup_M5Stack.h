@@ -1,18 +1,5 @@
-#ifndef SETUP1_ILI9341_H
-#define SETUP1_ILI9341_H
-
-#define ILI9341_DRIVER
-
-#ifndef TFT_WIDTH
-  #define TFT_WIDTH  240
-#endif
-#ifndef TFT_HEIGHT
-  #define TFT_HEIGHT 320
-#endif
-
-
 // For M5Stack ESP32 module with integrated display ONLY, remove // in line below
-//#define M5STACK
+#define M5STACK
 
 // For ST7735  and ILI9163 ONLY, define the pixel width and height in portrait orientation
 //#define TFT_WIDTH  128
@@ -74,9 +61,9 @@
 // ###### EDIT THE PIN NUMBERS IN THE LINES FOLLOWING TO SUIT YOUR ESP8266 SETUP ######
 
 // For NodeMCU - use pin numbers in the form PIN_Dx where Dx is the NodeMCU pin designation
-#define TFT_CS   PIN_D8  // Chip select control pin D8
-#define TFT_DC   PIN_D3  // Data Command control pin
-#define TFT_RST  PIN_D4  // Reset pin (could connect to NodeMCU RST, see next line)
+//#define TFT_CS   PIN_D8  // Chip select control pin D8
+//#define TFT_DC   PIN_D3  // Data Command control pin
+//#define TFT_RST  PIN_D4  // Reset pin (could connect to NodeMCU RST, see next line)
 //#define TFT_RST  -1  // Set TFT_RST to -1 if the display RESET is connected to NodeMCU RST or 3.3V
 
 //#define TOUCH_CS PIN_D1     // Chip select pin (T_CS) of touch screen
@@ -113,13 +100,13 @@
 //#define TFT_WR 22    // Write strobe for modified Raspberry Pi TFT only
 
 // For the M5Stack module use these #define lines
-//#define TFT_MISO 19
-//#define TFT_MOSI 23
-//#define TFT_SCLK 18
-//#define TFT_CS   14  // Chip select control pin
-//#define TFT_DC   27  // Data Command control pin
-//#define TFT_RST  33  // Reset pin (could connect to Arduino RESET pin)
-//#define TFT_BL   32  // LED back-light
+#define TFT_MISO 19
+#define TFT_MOSI 23
+#define TFT_SCLK 18
+#define TFT_CS   14  // Chip select control pin
+#define TFT_DC   27  // Data Command control pin
+#define TFT_RST  33  // Reset pin (could connect to Arduino RESET pin)
+#define TFT_BL   32  // LED back-light
 
 // ##################################################################################
 //
@@ -198,5 +185,3 @@
 // so changing it here has no effect
 
 // #define SUPPORT_TRANSACTIONS
-
-#endif /* SETUP1_ILI9341_H */

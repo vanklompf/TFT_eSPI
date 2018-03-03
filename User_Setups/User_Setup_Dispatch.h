@@ -11,19 +11,19 @@
 
 
 #if (TFT_DRIVER == ILI9341)
-  #include "User_Setups/Setup1_ILI9341.h"
+  #include "User_Setups/Setup_ILI9341.h"
   #include "TFT_Drivers/ILI9341_Defines.h"
 #elif (TFT_DRIVER == ST7735)
-  #include "User_Setups/Setup2_ST7735.h"
+  #include "User_Setups/Setup_ST7735.h"
   #include "TFT_Drivers/ST7735_Defines.h"
 #elif (TFT_DRIVER == S6D02A1)
-  #include "User_Setups/Setup4_S6D02A1.h"
+  #include "User_Setups/Setup_S6D02A1.h"
   #include "TFT_Drivers/S6D02A1_Defines.h"
 #elif (TFT_DRIVER == RPI_ILI9486)
-  #include "User_Setups/Setup5_RPi_ILI9486.h"
+  #include "User_Setups/Setup_RPi_ILI9486.h"
   #include "TFT_Drivers/RPI_ILI9486_Defines.h"
 #elif (TFT_DRIVER == ILI9163)
-  #include "User_Setups/Setup3_ILI9163.h"
+  #include "Setup_ILI9163.h"
   #include "TFT_Drivers/ILI9163_Defines.h"
 #endif
 

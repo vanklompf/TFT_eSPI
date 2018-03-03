@@ -1,3 +1,6 @@
+#ifndef S6D02A1_DEFINES_H
+#define S6D02A1_DEFINES_H
+
 // Color definitions for backwards compatibility with old sketches
 // use colour definitions like TFT_BLACK to make sketches more portable
 #define S6D02A1_BLACK       0x0000      /*   0,   0,   0 */
@@ -50,3 +53,5 @@
 
 // Defines pixel color configuration: RGB/BGR
 #define TFT_COLOR_ORDER TFT_MAD_BGR
+
+#endif /* S6D02A1_DEFINES_H */

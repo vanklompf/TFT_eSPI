@@ -1,36 +1,14 @@
-//                            USER DEFINED SETTINGS
-//   Set driver type, fonts to be loaded, pins used and SPI control method etc
-//
-//   See the User_Setup_Select.h file if you wish to be able to define multiple
-//   setups and then easily select which setup file is used by the compiler.
-//
-//   If this file is edited correctly then all the library example sketches should
-//   run without the need to make any more changes for a particular hardware setup!
+#ifndef SETUP_ILI9486_H
+#define SETUP_ILI9486_H
 
-#define ST7735_DRIVER
+#define RPI_ILI9486_DRIVER // 20MHz maximum SPI
 
 #ifndef TFT_WIDTH
-  #define TFT_WIDTH  128
+  #define TFT_WIDTH  320
 #endif
 #ifndef TFT_HEIGHT
-  #define TFT_HEIGHT 160
+  #define TFT_HEIGHT 480
 #endif
-
-
-// For ST7735 ONLY, define the type of display, originally this was based on the
-// colour of the tab on the screen protector film but this is not always true, so try
-// out the different options below if the screen does not display graphics correctly,
-// e.g. colours wrong, mirror images, or tray pixels at the edges.
-// Comment out ALL BUT ONE of these options for a ST7735 display driver, save this
-// this User_Setup file, then rebuild and upload the sketch to the board again:
-
-//#define ST7735_INITB
-//#define ST7735_GREENTAB
-//#define ST7735_GREENTAB2
-//#define ST7735_GREENTAB3
-//#define ST7735_GREENTAB128 // For 128 x 128 display
-#define ST7735_REDTAB
-//#define ST7735_BLACKTAB
 
 // ##################################################################################
 //
@@ -77,7 +55,7 @@
 #define TFT_RST  PIN_D4  // Reset pin (could connect to NodeMCU RST, see next line)
 //#define TFT_RST  -1  // Set TFT_RST to -1 if the display RESET is connected to NodeMCU RST or 3.3V
 
-//#define TOUCH_CS PIN_D1     // Chip select pin (T_CS) of touch screen
+#define TOUCH_CS PIN_D1     // Chip select pin (T_CS) of touch screen
 
 //#define TFT_WR PIN_D2       // Write strobe for modified Raspberry Pi TFT only
 
@@ -176,8 +154,8 @@
 // #define SPI_FREQUENCY   1000000
 // #define SPI_FREQUENCY   5000000
 // #define SPI_FREQUENCY  10000000
-// #define SPI_FREQUENCY  20000000
-#define SPI_FREQUENCY  27000000 // Actually sets it to 26.67MHz = 80/3
+#define SPI_FREQUENCY  20000000
+// #define SPI_FREQUENCY  27000000 // Actually sets it to 26.67MHz = 80/3
 // #define SPI_FREQUENCY  40000000 // Maximum to use SPIFFS
 // #define SPI_FREQUENCY  80000000
 
@@ -196,3 +174,5 @@
 // so changing it here has no effect
 
 // #define SUPPORT_TRANSACTIONS
+
+#endif /* SETUP_ILI9486_H */
