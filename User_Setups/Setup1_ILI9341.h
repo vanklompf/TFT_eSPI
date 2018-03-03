@@ -18,10 +18,14 @@
 
 // Only define one driver, the other ones must be commented out
 #define ILI9341_DRIVER
-//#define ST7735_DRIVER
-//#define ILI9163_DRIVER
-//#define S6D02A1_DRIVER
-//#define RPI_ILI9486_DRIVER // 20MHz maximum SPI
+
+#ifndef TFT_WIDTH
+  #define TFT_WIDTH  240
+#endif
+#ifndef TFT_HEIGHT
+  #define TFT_HEIGHT 320
+#endif
+
 
 // For M5Stack ESP32 module with integrated display ONLY, remove // in line below
 //#define M5STACK

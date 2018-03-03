@@ -18,7 +18,15 @@
 //#define ST7735_DRIVER
 //#define ILI9163_DRIVER
 #define S6D02A1_DRIVER
-//#define RPI_ILI9486_DRIVER // 20MHz maximum SPI
+
+// define the pixel width and height in portrait orientation
+#ifndef TFT_WIDTH
+  #define TFT_WIDTH  128
+#endif
+#ifndef TFT_HEIGHT
+  #define TFT_HEIGHT 160
+#endif
+
 
 // For M5Stack ESP32 module with integrated display ONLY, remove // in line below
 //#define M5STACK
