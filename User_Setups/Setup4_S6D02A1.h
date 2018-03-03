@@ -1,22 +1,3 @@
-//                            USER DEFINED SETTINGS
-//   Set driver type, fonts to be loaded, pins used and SPI control method etc
-//
-//   See the User_Setup_Select.h file if you wish to be able to define multiple
-//   setups and then easily select which setup file is used by the compiler.
-//
-//   If this file is edited correctly then all the library example sketches should
-//   run without the need to make any more changes for a particular hardware setup!
-
-// ##################################################################################
-//
-// Section 0. Call up the right driver file and any options for it
-//
-// ##################################################################################
-
-// Only define one driver, the other ones must be commented out
-//#define ILI9341_DRIVER
-//#define ST7735_DRIVER
-//#define ILI9163_DRIVER
 #define S6D02A1_DRIVER
 
 // define the pixel width and height in portrait orientation

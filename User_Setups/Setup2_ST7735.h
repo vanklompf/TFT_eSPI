@@ -7,26 +7,15 @@
 //   If this file is edited correctly then all the library example sketches should
 //   run without the need to make any more changes for a particular hardware setup!
 
-// ##################################################################################
-//
-// Section 0. Call up the right driver file and any options for it
-//
-// ##################################################################################
-
-// Only define one driver, the other ones must be commented out
-//#define ILI9341_DRIVER
 #define ST7735_DRIVER
-//#define ILI9163_DRIVER
-//#define S6D02A1_DRIVER
-//#define RPI_ILI9486_DRIVER // 20MHz maximum SPI
 
-// For M5Stack ESP32 module with integrated display ONLY, remove // in line below
-//#define M5STACK
+#ifndef TFT_WIDTH
+  #define TFT_WIDTH  128
+#endif
+#ifndef TFT_HEIGHT
+  #define TFT_HEIGHT 160
+#endif
 
-// For ST7735  and ILI9163 ONLY, define the pixel width and height in portrait orientation
-#define TFT_WIDTH  128
-#define TFT_HEIGHT 160
-//#define TFT_HEIGHT 128
 
 // For ST7735 ONLY, define the type of display, originally this was based on the
 // colour of the tab on the screen protector film but this is not always true, so try
