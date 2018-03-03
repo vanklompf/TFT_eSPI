@@ -12,18 +12,34 @@
   #define TFT_HEIGHT 160
 #endif
 
-// For ILI9163 variants with height smaller than 160 offsetw for CGRAM are needed
+// For ILI9163 variants with height smaller than 160 offsets for CGRAM are needed
 // Multiple variants of CGRAM to display mapping exist. Here define offset for x and y axis for each rotation. Offsets are used in Basic_Rotation.h
 #if (TFT_HEIGHT != 160)
   #ifndef CGRAM_OFFSET
     #define CGRAM_OFFSET
+  #endif
+  #ifndef R0_OFFSET_X
     #define R0_OFFSET_X 0
+  #endif
+  #ifndef R0_OFFSET_Y
     #define R0_OFFSET_Y 0
+  #endif
+  #ifndef R1_OFFSET_X
     #define R1_OFFSET_X 0
+  #endif
+  #ifndef R1_OFFSET_Y
     #define R1_OFFSET_Y 0
+  #endif
+  #ifndef R2_OFFSET_X
     #define R2_OFFSET_X 0
+  #endif
+  #ifndef R2_OFFSET_Y
     #define R2_OFFSET_Y 32
+  #endif
+  #ifndef R3_OFFSET_X
     #define R3_OFFSET_X 32
+  #endif
+  #ifndef R3_OFFSET_Y
     #define R3_OFFSET_Y 0
   #endif
 #endif
