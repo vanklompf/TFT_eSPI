@@ -16,4 +16,4 @@ env:
     - PLATFORMIO_CI_SRC="examples/Sprite/Transparent_Sprite_Demo"
     
 script:
-    - platformio ci --lib="." --board=nodemcuv2 --project-conf=Continous_Integration/travis.ini
+    - platformio ci --lib="." --project-conf=Continous_Integration/travis.ini

@@ -1,0 +1,1 @@
+platformio ci --lib=".." --board=nodemcuv2 --project-option="targets=upload" --project-option="build_flags = -D TFT_DRIVER=ILI9163 -D TFT_WIDTH=128 -D TFT_HEIGHT=128 -D R0_OFFSET_Y=32 -D R1_OFFSET_X=32 -Os -std=c++1y -Werror" manualTest.cpp
