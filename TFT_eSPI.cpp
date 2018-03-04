@@ -251,23 +251,6 @@ void TFT_eSPI::init(void)
 #endif
 
   spi_begin();
-  
-#if (TFT_DRIVER == ILI9341)
-  #include <User_Setups/Setup_ILI9341.h>
-  #include <TFT_Drivers/ILI9341_Defines.h>
-#elif (TFT_DRIVER == ST7735)
-  #include <User_Setups/Setup_ST7735.h>
-  #include <TFT_Drivers/ST7735_Defines.h>
-#elif (TFT_DRIVER == S6D02A1)
-  #include <User_Setups/Setup_S6D02A1.h>
-  #include <TFT_Drivers/S6D02A1_Defines.h>
-#elif (TFT_DRIVER == RPI_ILI9486)
-  #include <User_Setups/Setup_RPi_ILI9486.h>
-  #include <TFT_Drivers/RPI_ILI9486_Defines.h>
-#else //(TFT_DRIVER == ILI9163)
-  #include <User_Setups/Setup_ILI9163.h>
-  #include <TFT_Drivers/ILI9163_Defines.h>
-#endif
 
   // This loads the driver specific initialisation code  <<<<<<<<<<<<<<<<<<<<< ADD NEW DRIVERS TO THE LIST HERE <<<<<<<<<<<<<<<<<<<<<<<
 #if (TFT_DRIVER == ILI9341)

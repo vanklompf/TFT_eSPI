@@ -26,5 +26,6 @@
   #include "Setup_ILI9163.h"
   #include "TFT_Drivers/ILI9163_Defines.h"
 #endif
+#include "User_Setups/Setup_Defaults.h"
 
 #endif /* USER_SETUP_DISPATCH_H*/
