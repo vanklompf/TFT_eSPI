@@ -467,6 +467,10 @@ class TFT_eSPI : public Print {
 
   size_t   write(uint8_t);
 
+  
+  void cs_l() {CS_L;}
+  void cs_h() {CS_H;}
+  
  private:
 
   inline void spi_begin() __attribute__((always_inline));
