@@ -3468,7 +3468,7 @@ int16_t TFT_eSPI::drawChar(unsigned int uniCode, int x, int y, int font)
     if ((font>2) && (font<9))
     {
       // This is slower than above but is more convenient for the RLE fonts
-      flash_address = pgm_read_dword( pgm_read_dword( &(fontdata[font].chartbl ) ) + uniCode*sizeof(void *) );
+      flash_address = pgm_read_dword( (void*)(pgm_read_dword( &(fontdata[font].chartbl ) ) + uniCode*sizeof(void *)) );
       width = pgm_read_byte( (uint8_t *)pgm_read_dword( &(fontdata[font].widthtbl ) ) + uniCode );
       height= pgm_read_byte( &fontdata[font].height );
     }
@@ -5689,7 +5689,7 @@ int16_t TFT_eSprite::drawChar(unsigned int uniCode, int x, int y, int font)
     if ((font>2) && (font<9))
     {
       // This is slower than above but is more convenient for the RLE fonts
-      flash_address = pgm_read_dword( pgm_read_dword( &(fontdata[font].chartbl ) ) + uniCode*sizeof(void *) );
+      flash_address = pgm_read_dword( (void*)(pgm_read_dword( &(fontdata[font].chartbl ) ) + uniCode*sizeof(void *)) );
       width = pgm_read_byte( (uint8_t *)pgm_read_dword( &(fontdata[font].widthtbl ) ) + uniCode );
       height= pgm_read_byte( &fontdata[font].height );
     }
